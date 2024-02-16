@@ -1,1 +1,404 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+// HEADER STYLES
+header {
+
+    .top-info-header {
+        background-color: #0282f9;
+
+        li:first-child a {
+            padding-right: 50px;
+        }
+
+        li a {
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: small;
+        }
+    }
+
+    // LEFT SIDE HEADER
+    .logo {
+        width: 65px;
+        vertical-align: middle;
+    }
+
+    .header-list-container {
+        vertical-align: middle;
+
+        // RIGHT SIDE HEADER LIST
+        ul {
+            list-style-type: none;
+            display: flex;
+            margin-bottom: 0px;
+
+            li {
+                padding: 18px;
+                border: 3px solid transparent;
+
+                &.active,
+                &:hover {
+                    border-bottom: 3px solid #0282F9;
+
+                }
+
+                a {
+                    color: #1C1C1C;
+                    text-decoration: none;
+
+                    &.active,
+                    &:hover {
+                        color: #0282F9;
+
+                    }
+
+                }
+            }
+
+        }
+    }
+}
+
+// MAIN STYLES
+main {
+    h3 {
+        color: white;
+        padding: 100px 0px;
+    }
+
+    button {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 7px 60px;
+        transition: 0.5s;
+        background-color: #0282F9;
+        border: 1px solid #0282F9;
+        font-size: 14px;
+
+        &:hover {
+            border-radius: 20px;
+        }
+
+    }
+
+
+
+}
+
+// BANNER STYLES
+.banner-container {
+
+    background-color: #0282F9;
+    padding: 70px 0px;
+
+    h5 {
+        font-size: 15px;
+        color: white;
+        padding: 0px 15px;
+    }
+
+    img {
+
+        width: 50px;
+        height: 60px
+    }
+}
+
+// COMIC STYLE
+.card_container {
+
+    padding: 30px 0px;
+
+    h5 {
+        color: white;
+        text-transform: uppercase;
+        font-size: 15px;
+        margin-right: 10px;
+    }
+
+
+
+    .img-container {
+
+
+        img {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            object-position: top;
+            transition: 0.7s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+        }
+
+        .price-tag {
+            color: white;
+            background-color: #0282F9;
+            padding: 2px 7px;
+            font-size: 13px;
+            border-radius: 10px;
+            position: relative;
+            bottom: 180px;
+            left: 155px;
+            transition: 0.7s;
+
+        }
+
+    }
+}
+
+// SINGLE COMIC STYLES
+
+.my-light-green {
+    color: #92DB6D;
+}
+
+.blue-jumbo-bar {
+    background-color: #0282F9;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.my-bg-grey {
+    background-color: #F6F6F6;
+}
+
+.my-border-black-r {
+    border-right: 1px solid #357739;
+}
+
+.ml-2 {
+    margin-left: 20px;
+}
+
+.pl-0 {
+    padding-left: 0px;
+}
+
+.pr-0 {
+    padding-right: 0px;
+}
+
+.detail-img-container {
+    img {
+        width: 200px;
+        position: absolute;
+        bottom: 20px;
+        left: 470px;
+
+    }
+}
+
+.comic-info-container {
+
+    h1 {
+        font-size: 35px;
+        color: #193C50;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    p {
+        color: #777777;
+    }
+
+
+    .stock-price-container {
+        font-size: 14px;
+        margin-top: 30px;
+        background-color: #55BA59;
+        border-bottom: 1px solid #357739;
+    }
+}
+
+.table-container {
+    h5 {
+        font-size: 23px;
+        color: #193C50;
+        font-weight: 600;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #a1a1a1;
+    }
+
+    table {
+
+        font-size: 14px;
+        width: 100%;
+
+        .td-index {
+            color: #193C50;
+            padding-bottom: 20px;
+        }
+
+        tr {
+            border-bottom: 1px solid #a1a1a1;
+
+            td {
+                padding: 20px 0px 20px 0px;
+
+                a {
+                    text-decoration: none;
+                    color: #0282F9;
+                }
+            }
+        }
+    }
+}
+
+
+// MAIN JUMBOTRON
+.default-badge-bg {
+    color: white;
+    font-weight: bold;
+    padding: 12px 50px;
+    font-size: 23px;
+    background-color: #0282F9;
+    position: absolute;
+    bottom: -25px;
+    left: 300px;
+}
+
+.jumbo-container {
+    position: relative;
+    height: 450px;
+    background-size: cover;
+    background-image: url(/resources/img/jumbotron.jpg);
+
+
+}
+
+// FOOTER STYLES
+footer {
+    position: relative;
+
+    .footer-bg {
+        background-image: url(/resources/img/footer-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .logo {
+        position: absolute;
+        top: -45px;
+        width: 650px;
+    }
+
+    // TOP FOOTER STYLES
+    .top-footer {
+        display: flex;
+        flex-wrap: wrap;
+
+        h3 {
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0px 20px;
+            margin: 0px 15px;
+            color: white;
+
+            li {
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 14px;
+                    font-weight: lighter;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    // BOTTOM FOOTER STYLES
+    .bottom-footer {
+        padding: 35px 0px;
+        position: relative;
+        z-index: 999;
+        background-color: #303030;
+        display: flex;
+        align-items: center;
+
+        span {
+            color: #0282F9;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            margin-bottom: 0px;
+
+            li {
+                padding: 7px;
+                margin: 5px;
+                cursor: pointer;
+                border: 1px solid transparent;
+                border-radius: 50%;
+                transition: all 0.5s;
+
+                &:hover {
+                    border: 1px solid #0282F9;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .sign-up-button {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 7px 12px;
+            border: 3px solid #0282F9;
+            transition: 0.5s;
+
+            &:hover {
+                border-radius: 20px;
+            }
+        }
+    }
+
+}
+
+.my-bg-blue {
+    background-color: #0282F9;
+}
+
+.my-blue {
+    color: #0282F9;
+}
+
+.my-bg-black {
+    background-color: #1C1C1C
+}
+
+.my-container-lg {
+
+    max-width: 960px;
+    margin: auto;
+}

@@ -14,7 +14,13 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+
+        $comics = Comic::all();
+        $socials = config('footer_socials');
+        $header_links = config('header_links');
+        $footer_lists = config('footer_list');
+        $banner_infos = config('banner_infos');
+        return view('comics.index', compact('comics', 'socials', 'header_links', 'footer_lists', 'banner_infos'));
     }
 
     /**
@@ -44,9 +50,14 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
-        //
+        $socials = config('footer_socials');
+        $header_links = config('header_links');
+        $footer_lists = config('footer_list');
+        $banner_infos = config('banner_infos');
+
+        return view('comics.show', compact('comic', 'socials', 'header_links', 'footer_lists', 'banner_infos'));
     }
 
     /**
