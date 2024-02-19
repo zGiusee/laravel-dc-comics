@@ -29,6 +29,12 @@
                             <input class="w-75" type="text" id="img" name="img">
                         </div>
 
+                        {{-- COMIC TYPE --}}
+                        <div class="mt-4">
+                            <label for="type" class="d-block">Comic type:</label>
+                            <input class="w-50" type="text" id="type" name="type">
+                        </div>
+
                         {{-- COMICS DESCRIPTION --}}
                         <div class="mt-4">
                             <label for="description" class="d-block">Description:</label>
@@ -122,6 +128,10 @@
 
                 </div>
             </div>
+        </div>
+
+        <div class="text-center m-5">
+            <button type="submit" class="default-btn"> Aggiungi Comic</button>
         </div>
     </form>
 @endsection
