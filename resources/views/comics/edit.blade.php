@@ -20,6 +20,15 @@
                     <div class="col-8 comic-info-container">
                         <!-- COMIC INFOS -->
                         <div>
+                            @if ($errors->any())
+                                <div class="alert alert-danger py-3">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li> {{ $error }} </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <label for="title" class="d-block">Title:</label>
                             <input class="w-75" type="text" id="title" name="title"
                                 value="{{ $comic['title'] }}">
