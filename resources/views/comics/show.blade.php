@@ -88,13 +88,17 @@
                                         <tr>
                                             <td class="td-index">Art by:</td>
                                             <td>
-                                                <p class="my-blue">{{ $comic['artists'] }}</p>
+                                                @foreach ($artists as $artist)
+                                                    <span class="my-blue">{{ $artist . ',' }}</span>
+                                                @endforeach
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="td-index">Written by:</td>
                                             <td>
-                                                <p class="my-blue">{{ $comic['writers'] }}</p>
+                                                @foreach ($writers as $writer)
+                                                    <span class="my-blue">{{ $writer . ',' }}</span>
+                                                @endforeach
                                             </td>
                                         </tr>
                                     </table>
