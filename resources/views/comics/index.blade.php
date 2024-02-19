@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="text-center mt-5">
-                    <button type="button" class="default-btn"> LOAD MORE </button>
+                    <a class="default-btn" href=" {{ route('comics.create') }}"> Aggiungi Comic </a>
                 </div>
             </div>
         </div>
