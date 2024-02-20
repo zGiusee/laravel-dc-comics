@@ -30,27 +30,28 @@
                                 </div>
                             @endif
                             <label for="title" class="d-block">Title:</label>
-                            <input class="w-75" type="text" id="title" name="title"
+                            <input required class="w-75" type="text" id="title" name="title"
                                 value="{{ $comic['title'] }}">
                         </div>
 
                         <!-- IMG -->
                         <div class="mt-4">
-                            <label for="img" class="d-block">Image:</label>
-                            <input class="w-75" type="text" id="img" name="img"
+                            <label for="thumb" class="d-block">Image:</label>
+                            <input required class="w-75" type="text" id="thumb" name="thumb"
                                 value="{{ $comic['thumb'] }}">
                         </div>
 
                         {{-- COMIC TYPE --}}
                         <div class="mt-4">
                             <label for="type" class="d-block">Comic type:</label>
-                            <input class="w-50" type="text" id="type" name="type" value="{{ $comic['type'] }}">
+                            <input required class="w-50" type="text" id="type" name="type"
+                                value="{{ $comic['type'] }}">
                         </div>
 
                         {{-- COMICS DESCRIPTION --}}
                         <div class="mt-4">
                             <label for="description" class="d-block">Description:</label>
-                            <textarea rows="10" cols="60" id="description" name="description">
+                            <textarea required rows="10" cols="60" id="description" name="description">
                                 {{ $comic['description'] }}
                             </textarea>
                         </div>
@@ -91,7 +92,7 @@
                                             <tr>
                                                 <td class="td-index">Art by:</td>
                                                 <td>
-                                                    <textarea class="mx-2" rows="5" cols="45" id="artists" name="artists">
+                                                    <textarea required class="mx-2" rows="5" cols="45" id="artists" name="artists">
                                                         {{ implode(',', $artists) }}       
                                                     </textarea>
                                                 </td>
@@ -99,7 +100,7 @@
                                             <tr>
                                                 <td class="td-index">Written by:</td>
                                                 <td>
-                                                    <textarea class="mx-2" rows="5" cols="45" id="writers" name="writers">
+                                                    <textarea required class="mx-2" rows="5" cols="45" id="writers" name="writers">
                                                        {{ implode(',', $writers) }}                             
                                                     </textarea>
                                                 </td>
@@ -117,22 +118,22 @@
                                             <tr>
                                                 <td class="td-index">Series:</td>
                                                 <td>
-                                                    <input class="w-75" type="text" name="series" id="series"
-                                                        value="{{ $comic['series'] }}">
+                                                    <input required class="w-75" type="text" name="series"
+                                                        id="series" value="{{ $comic['series'] }}">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="td-index">U.S. Price:</td>
                                                 <td>
-                                                    <input type="text" name="price" id="price"
+                                                    <input required type="text" name="price" id="price"
                                                         value="{{ $comic['price'] }}">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="td-index">On Sale Date:</td>
                                                 <td>
-                                                    <input class="w-50" type="date" name="sale_date" id="sale_date"
-                                                        value="{{ $comic['sale_date'] }}">
+                                                    <input required class="w-50" type="date" name="sale_date"
+                                                        id="sale_date" value="{{ $comic['sale_date'] }}">
                                                 </td>
                                             </tr>
                                         </table>

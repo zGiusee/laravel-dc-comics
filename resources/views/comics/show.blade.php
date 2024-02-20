@@ -13,8 +13,14 @@
         <div class="my-container-lg">
             <div class="row">
 
-                <div class="col-12">
-                    <a class="default-btn" href="{{ route('comics.edit', ['comic' => $comic['id']]) }}"> Edit comic</a>
+                <div class="col-12 d-flex ">
+                    <a class="default-btn" href="{{ route('comics.edit', ['comic' => $comic['id']]) }}">Edit comic</a>
+                    <form class=" mx-3" action="{{ route('comics.destroy', ['comic' => $comic['id']]) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger rounded-0 text-uppercase">Delete
+                            comic</button>
+                    </form>
                 </div>
 
                 {{-- TILE AND STOCKS INFO --}}

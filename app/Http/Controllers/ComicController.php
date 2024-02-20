@@ -50,7 +50,7 @@ class ComicController extends Controller
         $request->validate([
             'title' => 'required|max:50|min:5',
             'description' => 'required|max:400|min:5',
-            'img' => 'required|min:20',
+            'thumb' => 'required|min:20',
             'price' => 'required|max:20',
             'series' => 'required|max:50',
             'sale_date' => 'required',
@@ -65,7 +65,7 @@ class ComicController extends Controller
 
         $comic->title = $form_data['title'];
         $comic->description = $form_data['description'];
-        $comic->thumb = $form_data['img'];
+        $comic->thumb = $form_data['thumb'];
         $comic->price = $form_data['price'];
         $comic->series = $form_data['series'];
         $comic->sale_date = $form_data['sale_date'];
@@ -126,7 +126,7 @@ class ComicController extends Controller
         $request->validate([
             'title' => 'required|max:50|min:5',
             'description' => 'required|max:400|min:5',
-            'img' => 'required|min:20',
+            'thumb' => 'required|min:20',
             'price' => 'required|max:20',
             'series' => 'required|max:50',
             'sale_date' => 'required',
@@ -141,7 +141,7 @@ class ComicController extends Controller
 
         $comic->title = $form_data['title'];
         $comic->description = $form_data['description'];
-        $comic->thumb = $form_data['img'];
+        $comic->thumb = $form_data['thumb'];
         $comic->price = $form_data['price'];
         $comic->series = $form_data['series'];
         $comic->sale_date = $form_data['sale_date'];
@@ -160,8 +160,10 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($comic)
     {
-        //
+        $comic = Comic::find($comic);
+        $comic->delete();
+        return redirect()->route('comics.index');
     }
 }
