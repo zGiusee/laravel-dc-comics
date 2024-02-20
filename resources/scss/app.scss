@@ -295,6 +295,7 @@ form {
         padding: 5px 0px;
     }
 
+
     input {
         background-color: transparent;
         border: none;
@@ -319,6 +320,12 @@ form {
         }
     }
 }
+
+.my-is-invalid {
+    border-color: red;
+
+}
+
 
 // MAIN JUMBOTRON
 .default-badge-bg {
