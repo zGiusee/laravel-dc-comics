@@ -52,13 +52,7 @@ class ComicController extends Controller
 
         $comic = new Comic();
 
-        $comic->title = $form_data['title'];
-        $comic->description = $form_data['description'];
-        $comic->thumb = $form_data['thumb'];
-        $comic->price = $form_data['price'];
-        $comic->series = $form_data['series'];
-        $comic->sale_date = $form_data['sale_date'];
-        $comic->type = $form_data['type'];
+        $comic->fill($form_data);
         $comic->artists = json_encode(explode(',', $form_data['artists']));
         $comic->writers = json_encode(explode(',', $form_data['writers']));
 
@@ -116,13 +110,8 @@ class ComicController extends Controller
 
         $comic = Comic::find($comic);
 
-        $comic->title = $form_data['title'];
-        $comic->description = $form_data['description'];
-        $comic->thumb = $form_data['thumb'];
-        $comic->price = $form_data['price'];
-        $comic->series = $form_data['series'];
-        $comic->sale_date = $form_data['sale_date'];
-        $comic->type = $form_data['type'];
+        $comic->update($form_data);
+
         $comic->artists = json_encode(explode(',', $form_data['artists']));
         $comic->writers = json_encode(explode(',', $form_data['writers']));
 
@@ -150,7 +139,7 @@ class ComicController extends Controller
             $data,
             [
                 'title' => 'required|max:50|min:5',
-                'description' => 'required|max:400|min:5',
+                'description' => 'required|max:700|min:5',
                 'thumb' => 'required|min:20',
                 'price' => 'required|max:20',
                 'series' => 'required|max:50',
