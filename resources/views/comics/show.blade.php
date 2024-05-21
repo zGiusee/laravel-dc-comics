@@ -15,10 +15,12 @@
 
                 <div class="col-12 d-flex ">
                     <a class="default-btn" href="{{ route('comics.edit', ['comic' => $comic['id']]) }}">Edit comic</a>
-                    <form class=" mx-3" action="{{ route('comics.destroy', ['comic' => $comic['id']]) }}" method="POST">
+                    <form class=" mx-3" id="delete_comic_form"
+                        action="{{ route('comics.destroy', ['comic' => $comic['id']]) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger rounded-0 text-uppercase">Delete
+                        <button type="submit" data_toggle="modal" data-target="#delete_modal"
+                            class="btn btn-danger rounded-0 text-uppercase" data-comic-title="{{ $comic->title }}">Delete
                             comic</button>
                     </form>
                 </div>
@@ -152,4 +154,5 @@
             </div>
         </div>
     </div>
+    @include('partials.modal_delete')
 @endsection
